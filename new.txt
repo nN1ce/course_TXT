@@ -1,0 +1,5 @@
+First_name: Evgeniy,
+Last_name: Lukyanov,
+Age: 32,
+Number of pets: 1,
+Salary: 6000
