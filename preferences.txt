@@ -1,0 +1,5 @@
+ Favorite movie: "Fast and Furious",
+ Favorite series: "Stranger things",
+ Favorite food: "spicy chicken from the KF",
+ Favorite time of the year: "Summer",
+ Country to visit: "Cyprus"

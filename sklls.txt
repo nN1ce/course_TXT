@@ -1,0 +1,11 @@
+Linux: pwd, cd, ls, -la, mkdir, find, rm, mv, cat, more, less, head, tail, cp, sudo !!, curl,date, cal, chmod,
+Git, GitHub, Git Bush: working with local and remote repositories,
+SQL: select, insert into, update, delete, join,
+Postman: GET, POST, PUT, DELETE,
+Android Studio: Connecting a device, creating an emulator, building a project, LogCat,
+ADB: adb device, adb connect, adb logcat, adb install,
+JMeter: spike testing,
+Charles, Fiddler: Certificate installation, proxy configuration, traffic interception and analysis,
+Testing theory: types, methods, software lifecycle and testing,
+Documentation: checklists, bug reports, test cases, etc,
+Python: Pytest, Selene, Selenium, Selenoid
