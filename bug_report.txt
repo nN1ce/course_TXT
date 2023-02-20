@@ -1,1 +1,50 @@
 
+wms-OCS-release-2.1.38.3-1.noarch (394.107)
+
+"- ОШИБКА Исправьте" при переходе по Enter на поле Линия ПО> в форме #101 ПРИЕМ ТОВАРОВ # с типом приемки по ПФ
+
+Согласно TASK Добавление нового сценария приема
+
+Оператор может не заполнять поле "Линия ПО", а вместо этого сосканировать в поле SN серийный номер с товара. 
+
+
+Условия:
+ПО 275180 Статус=В работе, Две Линии:
+
+    3793648, Линия=1, Товар=T-L-E-001, SO=A1,11111
+    3793649, Линия=2, Товар=T-L-E-001, SO=A2,22222 
+
+
+
+Шаги:
+1. Произвести прием товара, в РДТ 3.Прием груза=>2.Прием по ПФ, ввести данные:НПО>275180, Товар>T-L-E-001
+2. Маркер перешёл на поле Линия ПО>
+
+#101 ПРИЕМ ТОВАРОВ #
+НПО>275180__________
+Товар>T-L-E-001_____
+T-L-E-001
+Линия ПО>___
+СлСимвол=Да_________
+SN>_________________
+
+
+3. По Enter перейти на поле СлСимвол
+
+Ожидаемый результат: переход на поле СлСимвол
+Фактический результат: ошибка
+
+- ОШИБКА
+Исправьте
+
+
+
+
+ОТВЕТ= Да
+
+2023-01-30T11:43:09,307 [u=2453    ] DEBUG: =!=!=!=Current form: 'solvo.sm.impl.form.ReceiveStartFormOcs@11770aa2' and current page stack: rcv_type_select(20/14)  user_menu(20/14)
+2023-01-30T11:43:09,307 [u=2453    ] ERROR: processCommand exception on command: rdt( reflex( receive_start(20/14), rcn_line_number, [rcn='275180', sku_tag='T-L-E-001', rcn_line_number='', rcn_sn_field='', rcn_sl_symbol_field='yes'], rcn_line_number ) ).
+solvo.prolog.java.PrologException: solve: rdt( reflex( receive_start(20/14), rcn_line_number, [rcn='275180', sku_tag='T-L-E-001', rcn_line_number='', rcn_sn_field='', rcn_sl_symbol_field='yes'], rcn_line_number ) ).
+        at solvo.prolog.java.Prolog.solve(Prolog.java:144) ~[solvo-prolog-java-1.0.6.jar:1.0.6]
+        at solvo.sm.SessionChannel.processCommand(SessionChannel.java:393) ~[wms-sm-impl-1.3.12.jar:1.3.12]
+
